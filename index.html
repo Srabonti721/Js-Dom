@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom tour</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        li{
+            color: aqua;
+        }
+        #place-title{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To Dom</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure atque totam libero! Non debitis asperiores tempore repellat ea nobis ipsam voluptates quaerat temporibus officiis magni labore, odio voluptatem dolorem, totam quasi eveniet earum mollitia. Accusantium.</p>
+    </header>
+    <main>
+<section>
+            <h1>dom is so powerful. Dom Means </h1>
+        <ul>
+            <li>Dom = Document object  model</li>
+            <li>dom creat a new think. line button on off</li>
+            <li>dom used to read avelity increment</li>
+        </ul>
+</section>
+<section>
+    <h1 id="place-title">i like tour place</h1>
+    <ul>
+        <li>sundorban</li>
+        <li>bandorban</li>
+        <li>salban</li>
+        <li>kataban</li>
+    </ul>
+</section>
+<section>
+    <h1>dom niya kotha </h1>
+            <ul>
+            <li>dom da baba</li>
+            <li>kala jadu</li>
+            <li>dom firot anse</li>
+        </ul>
+</section>
+<section>
+    <h1 id="fruits-title">i like fruits</h1>
+    <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>watermelon</li>
+        <li>orange</li>
+        <li>grape</li>
+    </ul>
+</section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script>
+        // const student = {
+        //     name: "sikandor",
+        //     id : 12,
+        //     study : function (time){
+        //         console.log(time, "sa posasuna kora");    
+        //     }
+        // }
+        const domLi = document.getElementsByTagName("li");
+        for(const dom of domLi){
+            console.log(dom.innerText);
+            
+        }
+
+        const liCollection = document.getElementsByTagName("li");
+        // console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li);
+            
+        }
+        const headingTag = document.getElementsByTagName("h1");
+        // console.log(headingTag);
+        for(const heading of headingTag){
+            console.log(heading.innerText);      
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document for dom</title>
+<style>
+    .day{
+        color: blue;
+    }
+
+    #vegetables{
+         text-decoration: underline;
+         text-align: center;
+         
+    }
+        h1{
+        background-color: slategray;
+    }
+    .vegetables-container li{
+   color: blueviolet;
+   text-align: center;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>this is a header </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptas vero deleniti, hic voluptatibus vitae ullam nisi labore doloremque delectus!</p>
+    </header>
+    <main>
+        <section class="vegetables-container">
+            <h1 id="vegetables">favourits vegetables</h1>
+            <ul>
+                <li>potato</li>
+                <li>tomato</li>
+                <li>cucumber</li>
+                <li>carrot</li>
+                <li>broccoli</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="days">7 days name</h1>
+            <ul>
+                <li class="day">saturday</li>
+                <li class="day">sunday</li>
+                <li class="day">monday</li>
+                <li class="day">tuesday</li>
+                <li class="day">wednesday</li>
+                <li>thursday</li>
+                <li>friday</li>
+            </ul>
+        </section>
+        <section>
+            <h1>12 months name</h1>
+            <ul>
+                <li class="months">january</li>
+                <li class="months">february</li>
+                <li class="months">march</li>
+                <li class="months">april</li>
+                <li class="months">may</li>
+                <li class="months">june</li>
+                <li class="months">july</li>
+                <li>august</li>
+                <li>september</li>
+                <li>october</li>
+                <li>november</li>
+                <li>december</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+    // option-1: getElementsByTagName
+        const headerTag = document.getElementsByTagName("h1");
+        // console.log(headerTag);
+        for(const tag of headerTag){
+           console.log(tag.innerText);    
+        }
+                // option-2: getElementByID
+      const day = document.getElementById("days");
+      console.log(day);
+                // option-3: getElementsByClassName
+        const days = document.getElementsByClassName("day");
+        for(const d of days){
+            console.log(d.innerText);       
+        }
+        // option-4: querySelector
+        const months = document.querySelector(".months");
+        console.log(months);
+        // option-5 : querySelectorAll 
+        const vegetables = document.querySelectorAll(".vegetables-container li")
+            for(const vegetable of vegetables){
+                console.log(vegetable.innerText);   
+            }
+    </script>
+</body>
+</html>
