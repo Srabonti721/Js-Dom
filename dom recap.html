@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dom recap</title>
     <style>
-        h1{
+        h1 {
             color: aqua;
         }
-        p{
+
+        p {
             color: rgb(8, 110, 76);
         }
-         #header-title{
+
+        #header-title {
             text-align: center;
-         }
-         .vegetables-container li{
+        }
+
+        .vegetables-container li {
             color: chartreuse;
-         }
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .red-bg {
+            background-color: red !important;
+        }
     </style>
 </head>
+
 <body>
-    <header>
+    <header id="header">
         <h1 id="header-title">recap js dom</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus repellat consequuntur et similique illo, optio quam labore. Eligendi officiis et, cum molestias eos ex, provident eaque laborum fuga assumenda modi nulla! Earum id alias eos repudiandae, necessitatibus explicabo similique impedit!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rerum inventore ratione odio earum labore possimus nam voluptatum officia, velit, ab voluptas, vero ut ipsum. Culpa dolorum eligendi, asperiores animi id deserunt optio cupiditate minus nisi accusamus amet quisquam? Quia illo perferendis, ad sed neque saepe ut maxime molestias itaque!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus repellat consequuntur et similique
+            illo, optio quam labore. Eligendi officiis et, cum molestias eos ex, provident eaque laborum fuga assumenda
+            modi nulla! Earum id alias eos repudiandae, necessitatibus explicabo similique impedit!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rerum inventore ratione odio earum labore
+            possimus nam voluptatum officia, velit, ab voluptas, vero ut ipsum. Culpa dolorum eligendi, asperiores animi
+            id deserunt optio cupiditate minus nisi accusamus amet quisquam? Quia illo perferendis, ad sed neque saepe
+            ut maxime molestias itaque!</p>
     </header>
-    <main>
-                <section class="vegetables-container">
-            <h1 id="vegetables">favourits vegetables</h1>
+    <main id="main-container">
+        <section class="vegetables-container">
+            <h1 id="vegetables" class="vege purple-vege green-vege ">favourits vegetables</h1>
             <ul>
                 <li>potato</li>
                 <li>tomato</li>
@@ -36,10 +54,21 @@
                 <li>broccoli</li>
             </ul>
         </section>
-                <section>
-            <h1 id="days">7 days name</h1>
+        <section class="vegetables-container">
+            <h1 id="vegetables" class="vege  ">favourits vegetables</h1>
             <ul>
-                <li class="day">saturday</li>
+                <li>potato</li>
+                <li>tomato</li>
+                <li>cucumber</li>
+                <li>carrot</li>
+                <li>broccoli</li>
+            
+            </ul>
+        </section>
+        <section id="monthes-container">
+            <h1 id="days" class="date month">7 days name</h1>
+            <ul>
+                <li class="day month sumer-month raine-month">saturday</li>
                 <li class="day">sunday</li>
                 <li class="day">monday</li>
                 <li class="day">tuesday</li>
@@ -48,29 +77,42 @@
                 <li>friday</li>
             </ul>
         </section>
+        <section>
+            <h1 id="place-title">i like tour place</h1>
+            <ul id="places-container">
+                <li>sundorban</li>
+                <li>bandorban</li>
+                <li>salban</li>
+                <li>kataban</li>
+            </ul>
+        </section>
     </main>
+        <script src="js/append.js"></script>
+    <script src="js/domrecap.js"></script>
+  
     <script>
         // getElementsByTagName
         const allTag = document.getElementsByTagName("h1");
-        for(const all of allTag){
-            console.log(all.innerText);      
+        for (const all of allTag) {
+            // console.log(all.innerText);      
         }
         // getElementById
         const id = document.getElementById("days");
-        console.log(id);
+        // console.log(id);
         // getElementsByClassName
         const classNames = document.getElementsByClassName("day");
-        for(const names of classNames){
-            console.log(names.innerText);
+        for (const names of classNames) {
+            // console.log(names.innerText);
         }
         // querySelector
         const query = document.querySelector(".vegetables-container li")
-            console.log(query);
-            // 
-            const queryAll = document.querySelectorAll(".vegetables-container li");
-            for(const query of queryAll){
-                console.log(query.innerText);   
-            }
+        // console.log(query);
+        // 
+        const queryAll = document.querySelectorAll(".vegetables-container li");
+        for (const query of queryAll) {
+            // console.log(query.innerText);   
+        }
     </script>
 </body>
+
 </html>
